@@ -1,8 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Image} from 'react-native';
-
-export function Home( { navigation} ){
+import { StyleSheet, Text, View, Image, Button} from 'react-native';
+import { MainButton } from '../components/MainButton';
+ 
+export function Home({ navigation} ){
   return(
       <View style={styles.container}>
         <View style={styles.imgLogo}>
@@ -16,9 +17,8 @@ export function Home( { navigation} ){
         </View>
 
         <View>
-          <Text>
-              Button
-          </Text>
+        <MainButton title="Sobre" onPress={() => navigation.navigate('Sobre')}/>
+
         </View>
       </View>
   )
